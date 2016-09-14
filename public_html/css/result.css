@@ -1,0 +1,90 @@
+
+body {
+  background: #282828;/* match border color */
+  text-align: center;
+}
+a {
+  color: #dc006c;
+}
+small {
+  color: #333;
+}
+.header {
+  font: 84px 'Arial Narrow', sans-serif;/* I picked this font because it's the closest looking 'web safe' font http://cssfontstack.com/ */
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
+
+/* stuff for both words */
+.header span {
+  position: relative;
+}
+.header span:before,
+.header span:after {
+  content: '';
+  position: absolute;
+  border-width: 20px;/* makes a nice, big 64px square */
+  border-style: solid;
+  border-color: transparent;
+  height: 0;
+  z-index: 10;
+}
+
+.header .fname {
+  color: #35eaca;
+  margin-right: -28px;
+  transform: rotateY(180deg);/* using Prefix free */
+  display: inline-block;/* required for transform */
+  z-index: 10;
+}
+.header .fname:before {
+  right: -4px;/* would be left, but we flipped the word */
+  top: -9px;
+  border-top-color: #282828;/* match background color */
+  border-right-color: #282828;/* would be left, but we flipped the word */
+}
+.header .fname:after {
+  left: 17px;/* would be right, but we flipped the word */
+  bottom: -15px;
+  border-bottom-color: #282828;
+  border-left-color: #282828;/* would be right, but we flipped the word */
+}
+
+.header .lname {
+  z-index: 0;
+}
+.header .lname:before {
+  left: -4px;
+  top: -6px;
+  border-top-color: #282828;
+  border-left-color: #282828;
+}
+.header .lname:after {
+  right: -4px;  
+  bottom: 4px;
+  border-bottom-color: #282828;
+  border-right-color: #282828;
+}
+.table { color:#7F7F7F; border-collapse:collapse}
+.table,
+.table caption { border-right:1px solid #CCC; border-left:1px solid #CCC}
+.table caption,
+.table th,
+.table td { border-left:0; padding:10px}
+.table caption,
+.table thead th,
+.table tfoot th,
+.table tfoot td { background-color:#E63C1E; color:#FFF; font-weight:bold; text-transform:uppercase}
+.table thead th { background-color:#C30; color:#FFB3A6; text-align:center}
+.table tbody th { padding:20px 10px}
+.table tbody tr.odd { background-color:#F7F7F7; color:#666}
+.table tbody a { padding:1px 2px; color:#73d216; text-decoration:none; border-bottom:none}
+.table tbody a:hover{ color:#000}
+.table tbody tr:hover { background-color:#EEE; color:#333}
+.table tbody tr:hover a { background-color:#FFF}
+.table tbody td+td+td+td a { color:#C30; font-weight:bold; border-bottom:0}
+.table tbody td+td+td+td a:active,
+.table tbody td+td+td+td a:hover,
+.table tbody td+td+td+td a:focus,
+.table tbody td+td+td+td a:visited { color:#E63C1E}

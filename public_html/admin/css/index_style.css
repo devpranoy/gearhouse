@@ -1,0 +1,142 @@
+@import url(http://fonts.googleapis.com/css?family=Tenor+Sans);
+html {
+  background-color: #5D92BA;
+  font-family: "Tenor Sans", sans-serif;
+}
+
+.container {
+  width: 500px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.login {
+  margin-top: 50px;
+  width: 450px;
+}
+
+.login-heading {
+  font: 1.8em/48px "Tenor Sans", sans-serif;
+  color: red;
+}
+.login-heading strong{
+  color: white;
+}
+.input-txt {
+  width: 100%;
+  padding: 20px 10px;
+  background: #5D92BA;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+.input-txt:-moz-placeholder {
+  color: #81aac9;
+}
+.input-txt:-ms-input-placeholder {
+  color: #81aac9;
+}
+.input-txt::-webkit-input-placeholder {
+  color: #81aac9;
+}
+.input-txt:focus {
+  background-color: #4478a0;
+}
+
+.login-footer {
+  margin: 10px 0;
+  overlow: hidden;
+  float: left;
+  width: 100%;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  background: white;
+  color: #5D92BA;
+}
+
+.btn--right {
+  float: right;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.icon--min {
+  font-size: .9em;
+}
+
+.lnk {
+  font-size: .8em;
+  line-height: 3em;
+  color: white;
+  text-decoration: none;
+}
+.header {
+  font: 84px 'Arial Narrow', sans-serif;/* I picked this font because it's the closest looking 'web safe' font http://cssfontstack.com/ */
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
+
+/* stuff for both words */
+.header span {
+  position: relative;
+}
+.header span:before,
+.header span:after {
+  content: '';
+  position: absolute;
+  border-width: 20px;/* makes a nice, big 64px square */
+  border-style: solid;
+  border-color: transparent;
+  height: 0;
+  z-index: 10;
+}
+
+.header .fname {
+  color: #35eaca;
+  margin-right: -28px;
+  transform: rotateY(180deg);/* using Prefix free */
+  display: inline-block;/* required for transform */
+  z-index: 10;
+}
+.header .fname:before {
+  right: -4px;/* would be left, but we flipped the word */
+  top: -9px;
+  border-top-color: #5D92BA;/* match background color */
+  border-right-color: #5D92BA;/* would be left, but we flipped the word */
+}
+.header .fname:after {
+  left: 17px;/* would be right, but we flipped the word */
+  bottom: -15px;
+  border-bottom-color: #5D92BA;
+  border-left-color: #5D92BA;/* would be right, but we flipped the word */
+}
+
+.header .lname {
+  z-index: 0;
+}
+.header .lname:before {
+  left: -4px;
+  top: -6px;
+  border-top-color: #5D92BA;
+  border-left-color: #5D92BA;
+}
+.header .lname:after {
+  right: -4px;  
+  bottom: 4px;
+  border-bottom-color: #5D92BA;
+  border-right-color: #5D92BA;
+}
